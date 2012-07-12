@@ -66,9 +66,9 @@ While this is convenient, the full, explicit metric form should be used.  The sh
 References
 ==========
 
-[Flickr StatsD](http://code.flickr.com/blog/2008/10/27/counting-timing/)
-[Etsy StatsD](https://github.com/etsy/statsd)
-[Coda Hale's Metrics](http://metrics.codahale.com/)
-[metricsd](https://github.com/mojodna/metricsd)
-[Graphite](http://graphite.wikidot.com/)
+* [Flickr StatsD](http://code.flickr.com/blog/2008/10/27/counting-timing/)
+* [Etsy StatsD](https://github.com/etsy/statsd)
+* [Coda Hale's Metrics](http://metrics.codahale.com/)
+* [metricsd](https://github.com/mojodna/metricsd)
+* [Graphite](http://graphite.wikidot.com/)
 
