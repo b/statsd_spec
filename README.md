@@ -24,35 +24,35 @@ The format of exported metrics is UTF-8 text, with metrics separated by newlines
 Gauges
 ------
 
-A gauge is an instantaneous measurement of a value, like the gas gauge in a car.  It differs from a counter by being calculated at the client rather than the server.  Valid gauge values are integers in the range [0, 2**64).
+A gauge is an instantaneous measurement of a value, like the gas gauge in a car.  It differs from a counter by being calculated at the client rather than the server.  Valid gauge values are integers in the range [0, 2^64^).
 
 	<metric name>:<value>|g
 
 Counters
 --------
 
-A counter is a gauge calculated at the server.  Metrics sent by the client increment or decrement the value of the gauge rather than giving its current value.  Counters may also have an associated sample rate, given as a decimal of the number of samples per event count.  For example, a sample rate of 1/10 would be exported as 0.1.   Valid counter values are integers in the range (-2**63, 2**63).
+A counter is a gauge calculated at the server.  Metrics sent by the client increment or decrement the value of the gauge rather than giving its current value.  Counters may also have an associated sample rate, given as a decimal of the number of samples per event count.  For example, a sample rate of 1/10 would be exported as 0.1.   Valid counter values are integers in the range (-2^63^, 2^63^).
 
 	<metric name>:<value>|c[|@<sample rate>]
 
 Timers
 ------
 
-A timer is a measure of the number of milliseconds elapsed between a start and end time, for example the time to complete rendering of a web page for a user.  Valid timer values are integers in the range [0, 2**64).
+A timer is a measure of the number of milliseconds elapsed between a start and end time, for example the time to complete rendering of a web page for a user.  Valid timer values are integers in the range [0, 2^64^).
 
 	<metric name>:<value>|ms
 
 Histograms
 ----------
 
-A histogram is a measure of the distribution of timer values over time, calculated at the server.  As the data exported for timers and histograms, this is currently an alias for a timer.  Valid histogram values are integers in the range [0, 2**64).
+A histogram is a measure of the distribution of timer values over time, calculated at the server.  As the data exported for timers and histograms, this is currently an alias for a timer.  Valid histogram values are integers in the range [0, 2^64^).
 
 	<metric name>:<value>|h
 
 Meters
 ------
 
-A meter measures the rate of events over time, calculated at the server.  They may also be thought of as increment-only counters.  Valid meter values are integers in the range [0, 2**64).
+A meter measures the rate of events over time, calculated at the server.  They may also be thought of as increment-only counters.  Valid meter values are integers in the range [0, 2^64^).
 
 	<metric name>:<value>|m
 
