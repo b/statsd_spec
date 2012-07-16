@@ -45,7 +45,7 @@ A timer is a measure of the number of milliseconds elapsed between a start and e
 Histograms
 ----------
 
-A histogram is a measure of the distribution of timer values over time, calculated at the server.  As the data exported for timers and histograms, this is currently an alias for a timer.  Valid histogram values are integers in the range [0, 2^64^).
+A histogram is a measure of the distribution of timer values over time, calculated at the server.  As the data exported for timers and histograms is the same, this is currently an alias for a timer.  Valid histogram values are integers in the range [0, 2^64^).
 
 	<metric name>:<value>|h
 
