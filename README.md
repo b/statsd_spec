@@ -19,7 +19,7 @@ If it can be structured as one of the metric types below, it can consumed by Sta
 Metric Types & Formats
 ======================
 
-The format of exported metrics is UTF-8 text, with metrics separated by newlines.  Metrics are generally of the form <metric name>:<value>|<type>, with exceptions noted in the metric type definitions below.
+The format of exported metrics is UTF-8 text, with metrics separated by newlines.  Metrics are generally of the form `<metric name>:<value>|<type>`, with exceptions noted in the metric type definitions below.
 
 Gauges
 ------
