@@ -26,9 +26,14 @@ The protocol allows for both integer and floating point values. Most implementat
 Gauges
 ------
 
-A gauge is an instantaneous measurement of a value, like the gas gauge in a car.  It differs from a counter by being calculated at the client rather than the server.  Valid gauge values are in the range [0, 2^64^)
+A gauge is an instantaneous measurement of a value, like the gas gauge in a car.  It differs from a counter by being calculated at the client rather than the server and only storing the last sent value.  Valid gauge values are in the range [0, 2^64^)
 
 	<metric name>:<value>|g
+	
+There is also a sign prefix notation to increment and decrement gauges on the server side:
+
+	<metric name>:+<value>|g
+	<metric name>:-<value>|g
 
 Counters
 --------
@@ -50,6 +55,15 @@ Histograms
 A histogram is a measure of the distribution of timer values over time, calculated at the server.  As the data exported for timers and histograms is the same, this is currently an alias for a timer.  Valid histogram values are in the range [0, 2^64^).
 
 	<metric name>:<value>|h
+	
+In the Etsy implementation histograms are configured as an option for timers and timer values are sorted into those preconfigured bins.
+	
+Sets
+-----
+
+Sets are distributed counters which store the same value only once during a flush interval. One example is counting the number of logged in users. At flush time the count of added values is send to the backend. Valid set values are in the range [0, 2^64^).
+
+	<metric name>:<value>|s
 
 Meters
 ------
