@@ -21,7 +21,7 @@ Metric Types & Formats
 
 The format of exported metrics is UTF-8 text, with metrics separated by newlines.  Metrics are generally of the form `<metric name>:<value>|<type>`, with exceptions noted in the metric type definitions below.
 
-The protocol allows for both integer and floating point values. Most implementations store values internally as a IEEE 794 double precision float, but many implementations and graphing systems only support integer values. For compatibility all values should be integers in the range (-2^53^, 2^53^).
+The protocol allows for both integer and floating point values. Most implementations store values internally as a IEEE 754 double precision float, but many implementations and graphing systems only support integer values. For compatibility all values should be integers in the range (-2^53^, 2^53^).
 
 Gauges
 ------
